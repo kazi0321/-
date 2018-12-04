@@ -1,0 +1,40 @@
+div.syou {
+    width: 900px;
+    height: 600px;    
+    margin: 20px;
+    font-weight: bold;
+    color: #000000;/*文字色*/
+    background: #FFF;
+    border: solid 3px #000000;/*線*/
+    border-radius: 10px;/*角の丸み*/
+    position: relative;
+    }
+p.title{
+    text-align: center;
+    font-size: 250%;
+}
+
+p.setumei{
+    text-align: left;
+    font-size: 180%;
+}
+
+div.start button{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 250%;
+    font-weight:bold;
+    }
+
+div.back button{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 250%;
+    font-weight:bold;
+}
+
+a {
+    border: solid 3px #000000;/*線*/
+}

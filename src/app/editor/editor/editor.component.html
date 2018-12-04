@@ -1,0 +1,10 @@
+<div class="text">
+  <div class="row" *ngFor="let line of text; let i = index;">
+    <app-line
+      [line]="line"
+      [index]="i"
+      [indexWidth]="indexWidth"
+      (enter)="newLine($event)"
+      (prevLine)="lineConcat($event)"></app-line>
+  </div>
+</div>

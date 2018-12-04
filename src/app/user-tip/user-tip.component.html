@@ -1,0 +1,21 @@
+<div id="user-tip">
+  <div class="chip-list">
+    <mat-chip *ngFor="let usertip of usertips" [selectable]="selectable"
+    [removable]="removable" (removed)="remove(usertip)" draggable="true" class="chip">
+    {{usertip.name}}
+    <mat-icon matChipRemove *ngIf="removable">×</mat-icon>
+    </mat-chip>
+  </div>
+  <mat-form-field class="example-chip-list">
+    <mat-chip-list #chipList>
+      <input placeholder="New usertip..."
+            [matChipInputFor]="chipList"
+            [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+            [matChipInputAddOnBlur]="addOnBlur"
+            (matChipInputTokenEnd)="add($event)" >
+    </mat-chip-list>
+  </mat-form-field>
+</div>
+
+
+

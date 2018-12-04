@@ -1,0 +1,25 @@
+<div class="line" (click)="onclick()">
+  <div
+    class="index"
+    [style.width.px]="indexWidth | async">
+    {{ index | increment }}
+  </div>
+  <div class="spacer"></div>
+  <!--
+  <div class="indents" *ngFor="let indent of indents"></div>
+  -->
+  <mat-chip-list>
+    <app-word
+      *ngFor="let word of line; let i = index;"
+      [word]="word"
+      [index]="i"
+      (none)="remove(i)"
+      (backspace)="backWord($event)">
+    </app-word>
+  </mat-chip-list>
+  <input 
+    #input type="text" class="input"
+    (keydown.space)="add(input)"
+    (keydown.enter)="newLine(input)"
+    (keydown.backspace)="backLine(input)">
+</div>

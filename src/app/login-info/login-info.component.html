@@ -1,0 +1,4 @@
+<button mat-button [matMenuTriggerFor]="menu">{{user}}</button>
+<mat-menu #menu="matMenu">
+   <button *ngFor="let menuList of menuLists;let i = index"  mat-menu-item ><a href={{menuList.url}}>{{menuList.title}}</a></button>
+</mat-menu>

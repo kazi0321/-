@@ -1,0 +1,12 @@
+<div class="syou">
+  <p class="title">{{data.title}}</p>
+  <p class="setumei">{{data.state}}</p>
+  <div mat-dialog-actions>
+    <div class="back">
+      <button mat-button (click)="onNoClick()">戻る</button>
+    </div>
+    <div class="start">
+      <button mat-button (click)="onNoClick()" routerLink="/core" cdkFocusInitial>開始</button>
+    </div>
+  </div>
+</div>

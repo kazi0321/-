@@ -1,0 +1,10 @@
+<mat-chip *ngIf="state; else temp" (click)="onClick(input)">{{ word }}</mat-chip>
+<ng-template #temp>
+  <input
+    #input
+    type="text"
+    class="input"
+    [(ngModel)]="word"
+    (blur)="onBlur(input)"
+    (keydown.backspace)="onbackspace(input)">
+</ng-template>

@@ -1,0 +1,13 @@
+div.all{
+    width: auto;
+    height: 960px;
+    /* background-color: black; */
+}
+div.header{
+  height: 100px;
+  background-color: #84e6bd;
+}
+div.nakami{
+  height: 768px;
+  /* background-color: aqua; */
+}

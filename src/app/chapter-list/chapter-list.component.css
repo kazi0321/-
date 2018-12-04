@@ -1,0 +1,12 @@
+h1{
+    text-align: left;
+    font-size: 30px;
+}
+ul {
+    
+    list-style: none;
+  }
+li {
+    
+    margin-top:2em; margin-bottom:2em;
+}
