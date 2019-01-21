@@ -1,0 +1,9 @@
+<div class="tile">
+  <div class="max-width rela bgwhite" [@zidx]='ss.getState(dchips)'>
+    <mat-chip-list class="max-width flewap">
+      <mat-chip *ngFor="let item of items" draggable="true" (dragstart)="dragstartE($event, item)">{{ item }}</mat-chip>
+    </mat-chip-list>
+  </div>
+  <mat-divider [inset]="true"></mat-divider>
+  <br>
+</div>

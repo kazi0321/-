@@ -5,7 +5,6 @@ import { Observable, Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class CodeService {
-
   private _text: string[][] = [
     ['def', 'hellow_world:'],
     ['  ', 'print("hello world")'],
@@ -13,7 +12,7 @@ export class CodeService {
     ['123456'],
     ['abcdefg'],
   ];
-
+  private returnCodeArray: string[] = []
   private _indexWidthSubject: Subject<number> = new Subject();
   private _indexWidthObservable: Observable<number> = this._indexWidthSubject.asObservable();
 
@@ -34,14 +33,32 @@ export class CodeService {
     this._indexWidthSubject.next(digit * 10);
   }
 
-  public toCode(): any {
+  public toCode(chips): any {
+    this.returnCodeArray= []
+    chips.forEach(element => {
+      var line:string=""
+      element.forEach(chip => {
+        line += this.parseCode(chip)
+      });
+      this.returnCodeArray.push(line)
+    });
+    console.log(this.returnCodeArray)
     return {
-      code: [
-        ['def printStack():\n'],
-        ['    for str in ["abc", "def", "ghi"]:\n'],
-        ['        print(str)']
-      ]
+      python: this.returnCodeArray
     };
+  }
+
+
+  parseCode(chip) {
+    var rString
+    if(chip.match(/^表示:.*/)){
+      rString = "print(\"" + chip.slice(chip.indexOf(":")+1) + "\")"
+    }else if(chip.match(/^繰り返し:.*/)){
+      rString="for i in range("+chip.slice(chip.indexOf(":")+1)+"):"
+    }else if(chip.match(/^条件:.*/)){
+      rString="if True=True:"
+    }
+    return rString
   }
 
   constructor() { }

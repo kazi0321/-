@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { WordComponent } from './word/word.component';
-import { LineComponent } from './line/line.component';
 import { EditorComponent } from './editor/editor.component';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatChipsModule, MatButtonModule } from '@angular/material';
+import { MatButtonModule, MatChipsModule, MatCardModule, MatListModule,
+  MatGridListModule, MatDividerModule, MatInputModule, MatIconModule, } from '@angular/material';
+
 import { FormsModule } from '@angular/forms';
 import { IncrementPipe } from './increment.pipe';
 
@@ -15,11 +15,17 @@ import { IncrementPipe } from './increment.pipe';
     CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
-    MatChipsModule,
     MatButtonModule,
+    MatChipsModule,
+    MatCardModule,
+    MatListModule,
+    MatGridListModule,
+    MatDividerModule,
+    MatInputModule,
+    MatIconModule,
     FormsModule,
   ],
-  declarations: [WordComponent, LineComponent, EditorComponent, IncrementPipe],
-  exports: [WordComponent, LineComponent, EditorComponent, IncrementPipe],
+  declarations: [EditorComponent, IncrementPipe],
+  exports: [EditorComponent, IncrementPipe],
 })
 export class EditorModule { }

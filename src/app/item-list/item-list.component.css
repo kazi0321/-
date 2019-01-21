@@ -1,0 +1,51 @@
+.tile {
+    width: 100%;
+    height: 100%;
+    top: 20px;
+    position: relative;
+}
+
+.flewap {
+    flex-wrap: wrap;
+}
+
+.container {
+    display: flex;
+}
+
+.column-container {
+    flex-direction: column;
+}
+
+.bottoms {
+    position: absolute;
+	bottom: 0;
+}
+
+.scroll {
+    overflow: scroll;
+}
+
+.max-width {
+    width: 100%;
+}
+
+.max-height {
+    height: 300px;
+}
+
+.color1 {
+    background-color: #A5DFF9;
+}
+
+.color2 {
+    background-color: #ef5285;
+}
+
+.bgwhite {
+    background-color: white;
+}
+
+.rela {
+    position: relative;
+}

@@ -10,7 +10,6 @@ import { DefaultTipComponent } from './default-tip/default-tip.component';
 import { OutputComponent } from './output/output.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { AppRoutingModule } from './/app-routing.module';
-// import { CustomTextareaModule } from './edita/custom-textarea/custom-textarea.module';
 import {MatDialogModule} from '@angular/material/dialog';
 import { MaterialModule } from './material/material.module';
 import { SharedModule } from './shared/shared.module';
@@ -18,6 +17,8 @@ import { UserTipComponent } from './user-tip/user-tip.component';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ItemListComponent } from './item-list/item-list.component';
 
 import {
   MatAutocompleteModule,
@@ -42,9 +43,11 @@ import { OperatorComponent } from './editor/operator/operator.component';
     OutputComponent,
     UserTipComponent,
     OperatorComponent,
+    ItemListComponent,
   ],
   imports: [
     AppRoutingModule,
+    BrowserAnimationsModule,
     MaterialModule,
     SharedModule,
     MatChipsModule,
@@ -55,7 +58,6 @@ import { OperatorComponent } from './editor/operator/operator.component';
     MatAutocompleteModule,
     MatProgressBarModule,
     HttpClientModule,
-    // CustomTextareaModule,
     MatDialogModule,
     EditorModule,
     MatDividerModule,

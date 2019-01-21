@@ -1,8 +1,58 @@
-.text {
-    display: flex;
-    flex-direction: column;
+.parts {
+  width: 100%;
+  height: 100%;
 }
 
-.row {
-    min-height: 35px;
+.container {
+  display: flex;
+}
+
+.column-container {
+  flex-direction: row;
+}
+
+.number {
+  width: 1px;
+}
+
+.max-width {
+  width: 100%;
+}
+
+.test {
+  background-color: aquamarine;
+}
+
+.scroll {
+  overflow: scroll;
+}
+
+.anime {
+  animation-name: rOut;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rOut {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 70px
+  }
+}
+
+.anime2 {
+  animation-name: rIn;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rIn {
+  0% {
+    left: 70px;
+  }
+  100% {
+    left: 0px;
+  }
 }
