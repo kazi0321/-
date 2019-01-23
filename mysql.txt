@@ -1,0 +1,4 @@
+・カラム追加
+ALTER TABLE chapter ADD question varchar(255);
+・値代入
+update chapter set question = "問題1" where chapterID=1;

@@ -6,7 +6,10 @@ interface myChapterData {
   data: [{
     chapterID: string,
     title: string,
-    description: string
+    description: string,
+    question: string,
+    answer: string
+
   }]
 }
 
