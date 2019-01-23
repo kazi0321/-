@@ -1,2 +1,2 @@
 <button *ngFor="let chapterList of chapterLists;let i = index" mat-fab color="primary"
- (click)="openDetail(i)">{{icon_view(chapterList["chapterID"])}}</button>
+ (click)="openDetail(i)" (click)="getIndex(chapterList,i)">{{icon_view(chapterList["chapterID"])}}</button>

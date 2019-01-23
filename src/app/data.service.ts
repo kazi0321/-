@@ -15,6 +15,8 @@ interface myChapterData {
 })
 
 export class DataService {
+  index = 0
+  list = []
 
   constructor(private http: HttpClient) { }
 

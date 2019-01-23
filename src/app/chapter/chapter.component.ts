@@ -37,12 +37,17 @@ export class ChapterComponent implements OnInit {
 
   icon_view(num){
     var result:string
-    
+
     if (num.slice(-2)<10){
       result=num.slice(-1)
     }else{
       result=num
     }
     return result
+  }
+
+  getIndex(chapterList,i){
+    this.DataService.index = i
+    this.DataService.list = chapterList
   }
 }
