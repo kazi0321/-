@@ -1,7 +1,7 @@
 <div id="user-tip">
   <div class="chip-list">
     <mat-chip *ngFor="let usertip of usertips" [selectable]="selectable"
-    [removable]="removable" (removed)="remove(usertip)" draggable="true" class="chip">
+    [removable]="removable" (removed)="remove(usertip)" draggable="true" (dragstart)="dragstartE($event, usertip.name)" class="chip">
     {{usertip.name}}
     <mat-icon matChipRemove *ngIf="removable">×</mat-icon>
     </mat-chip>
@@ -16,6 +16,3 @@
     </mat-chip-list>
   </mat-form-field>
 </div>
-
-
-

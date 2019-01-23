@@ -19,24 +19,29 @@
                    draggable="true"
                   (dragstart)="dragstartE($event, chip)"
                   (dragend)="dragendE(i, j)">
-                  <div *ngIf='chip=="表示:" || chip=="繰り返し:"; then thenBlock else elseBlock'>
+                  <!-- <div *ngIf='chip=="表示:" || chip=="繰り返し:"; then thenBlock '>
                   </div>
-          <ng-template #thenBlock>
-            <div (click)=test(i,j)>{{ chip }}&nbsp;</div>
-          </ng-template>
-          <ng-template #elseBlock>{{ chip }}&nbsp;</ng-template>
+                    <ng-template #thenBlock>
+                      <div (click)=test(i,j)>{{ chip }}&nbsp;</div>
+                    </ng-template> -->
+                  <div *ngIf='chip=="条件:" || chip=="+"|| chip=="-"|| chip=="×"|| chip=="÷"|| chip=="＝"|| chip=="％"; then thenBlock2 else elseBlock2'>
+                  </div>
+                    <ng-template #thenBlock2>{{ chip }}&nbsp;</ng-template>
+                    <ng-template #elseBlock2>
+                      <div (click)=test(i,j)>{{ chip }}&nbsp;</div>
+                    </ng-template>
         </mat-chip>
-      </div>
+        </div>
       <div *ngIf="onChips"></div>
       <div *ngIf="service2.value" (dragleave)="cdragleaveE($event)" (dragenter)="dragenterE4(i)">
-        <mat-chip *ngFor="let chip of line; let j = index" 
+        <mat-chip *ngFor="let chip of line; let j = index"
                   draggable="true"
                   [@a]='service1.value2[i][j]'
                   (@a.done)="done1(j)"
                   (dragstart)="dragstartE($event, chip)"
                   (dragenter)="cdragenterE($event, i, j)"
                   (dragend)="dragendE(i, j)">{{ chip }}
-          <mat-icon matChipRemove (click)="searchAndDestroy(i, j)" >cancel</mat-icon>
+          <mat-icon matChipRemove  (click)="searchAndDestroy(i, j)" >×</mat-icon>
         </mat-chip>
       </div>
     </mat-list-item>

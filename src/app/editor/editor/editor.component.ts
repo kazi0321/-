@@ -5,6 +5,7 @@ import { CodeService } from '../code.service';
 import { ChipsService } from '../../services/chips.service';
 import { TagEditService } from '../../services/tag-edit.service';
 import { anies } from '../animation/animation';
+import {MatIconModule} from '@angular/material/icon';
 
 const INLINE: String = 'inline';
 const OUTLINE: String = 'outline';
@@ -112,4 +113,3 @@ export class EditorComponent implements OnInit {
     this.service1.value[i][j] = this.service1.value[i][j] + window.prompt("文字を入力してください");""
   }
 }
-
